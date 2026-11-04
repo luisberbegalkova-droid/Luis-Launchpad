@@ -1,0 +1,39 @@
+/* Launchpad: Liquid Glass visual system. Preserves all existing layout dimensions. */
+:root{--glass-border:rgba(231,245,255,.40)}
+body{background:radial-gradient(ellipse 48% 60% at 85% 20%,rgba(74,159,246,.30),transparent 76%),radial-gradient(ellipse 46% 58% at 0% 78%,rgba(54,133,227,.23),transparent 83%),radial-gradient(ellipse 50% 48% at 57% 100%,rgba(48,107,181,.15),transparent 86%),linear-gradient(135deg,#080f1c 0%,#101e31 52%,#08101e 100%);background-attachment:fixed}
+#mainContent{position:relative;isolation:isolate}
+#mainContent:before{content:"";position:fixed;z-index:-1;pointer-events:none;inset:26vh -7vw 0;background:radial-gradient(ellipse 30% 45% at 21% 48%,rgba(81,161,243,.17),transparent 83%),radial-gradient(ellipse 32% 40% at 81% 37%,rgba(130,192,255,.17),transparent 82%);filter:blur(33px)}
+.shell{position:relative;z-index:1}
+.header{border-bottom:1px solid rgba(218,235,255,.09);margin-bottom:9px}
+.search,.profile,.recent-chip{background:linear-gradient(140deg,rgba(218,239,255,.21),rgba(122,167,217,.12) 46%,rgba(133,181,228,.08));border:1px solid rgba(233,245,255,.43);box-shadow:inset 0 1px 0 rgba(255,255,255,.27),inset 0 -1px 0 rgba(255,255,255,.04),0 8px 28px #0003;backdrop-filter:blur(26px) saturate(165%);-webkit-backdrop-filter:blur(26px) saturate(165%)}
+.search:focus-within{border-color:#b4eaff;box-shadow:inset 0 1px 0 #fff5,0 0 0 3px #8ccfff2c}
+.profile:hover,.recent-chip:hover{background:linear-gradient(140deg,rgba(235,247,255,.26),rgba(105,157,220,.13))}
+.profile-menu{background:rgba(28,51,79,.97);border:1px solid #ffffff48;box-shadow:0 20px 40px #0006;backdrop-filter:blur(30px);-webkit-backdrop-filter:blur(30px)}
+.kbd{background:#ffffff22;border:1px solid #ffffff26;color:#e1efff}
+.cat{background:linear-gradient(142deg,rgba(208,234,255,.13),rgba(111,158,204,.07));border:1px solid rgba(230,244,255,.17);box-shadow:inset 0 1px 0 #ffffff19;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.cat:hover{background:#dbefff2a;border-color:#ffffff6e}
+.cat.active{background:linear-gradient(125deg,rgba(157,220,255,.78),rgba(65,151,229,.77) 56%,rgba(39,108,194,.80));border-color:#eafaffd9;box-shadow:inset 0 2px 0 #ffffff78,0 6px 24px #45a1ef50;backdrop-filter:blur(20px) saturate(175%);-webkit-backdrop-filter:blur(20px) saturate(175%)}
+.hero{background:linear-gradient(127deg,rgba(197,227,255,.22),rgba(112,162,211,.15) 35%,rgba(62,106,161,.14) 62%,rgba(151,198,238,.17));border:1px solid rgba(237,247,255,.49);backdrop-filter:blur(35px) saturate(165%) brightness(1.1);-webkit-backdrop-filter:blur(35px) saturate(165%) brightness(1.1);box-shadow:inset 0 2px 1px rgba(255,255,255,.32),inset 0 -1px 0 rgba(255,255,255,.09),0 17px 48px #0006,0 0 45px #5497d81a}
+.hero:before{z-index:0;left:34%;right:-9%;width:auto;bottom:-170px;height:330px;transform:rotate(-12deg);border-top:1px solid #c9edff9a;border-radius:50%;background:radial-gradient(ellipse at 48% 7%,#a5d8ff4d,#4797df25 35%,transparent 72%);filter:none}
+.hero:after{content:"";position:absolute;z-index:0;pointer-events:none;inset:0;border-radius:inherit;background:linear-gradient(174deg,#ffffff36,rgba(255,255,255,.08) 11%,transparent 32%),radial-gradient(ellipse 40% 90% at 100% 0%,#dcf3ff20,transparent 80%);mask-image:linear-gradient(#000,transparent 68%)}
+.hero-left,.hero-art{position:relative;z-index:1}
+.hero-badge-icon{background:linear-gradient(140deg,rgba(225,242,255,.40),rgba(102,162,218,.16) 52%,rgba(39,86,144,.15));border:1px solid #e7f7ff9e;box-shadow:inset 0 2px 1px #ffffff66,inset 0 -3px 14px #1d518c25,0 17px 34px #0004;backdrop-filter:blur(26px) saturate(160%);-webkit-backdrop-filter:blur(26px) saturate(160%)}
+.hero-badge-icon .symbol{color:#f3fbff;text-shadow:0 0 21px #93d3ff88}
+.hero-line{background:linear-gradient(transparent,#e5f4ffa3 20%,#d2ebff7f 80%,transparent)}
+.eyebrow{color:#b3e4ff}
+.hero-tag{background:linear-gradient(140deg,#e3f0ff3d,#72ade02b);border:1px solid #d7edff65;box-shadow:inset 0 1px 0 #ffffff3b;backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px)}
+.hero-art .symbol{color:#dcefff;text-shadow:0 0 30px #7fc5ff80;filter:drop-shadow(0 12px 24px #3a91db6b)}
+.open-button{background:linear-gradient(130deg,#9cdefff0,#4fabecea 60%,#277acaed);border-color:#f4fcffdd;box-shadow:inset 0 2px 1px #ffffff9c,inset 0 -1px 9px #2068b94d,0 8px 25px #338dda66}
+.open-button:hover{filter:brightness(1.1);box-shadow:inset 0 2px 1px #ffffffa0,0 10px 30px #52b2f982}
+.app-tile{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(140deg,rgba(224,240,255,.16),rgba(123,174,226,.06) 50%,rgba(63,118,182,.10));border:1px solid rgba(231,244,255,.29);box-shadow:inset 0 1px 0 #ffffff3a,inset 0 -1px 0 #ffffff0c,0 7px 20px #0003;backdrop-filter:blur(23px) saturate(165%);-webkit-backdrop-filter:blur(23px) saturate(165%)}
+.app-tile:before{content:"";position:absolute;pointer-events:none;z-index:-1;inset:0;background:radial-gradient(ellipse 75% 55% at 22% -15%,#f1fbff33,transparent 83%)}
+.app-tile:hover,.app-tile:focus-visible{background:linear-gradient(140deg,#e9f7ff42,#81baf127);border-color:#d8f0ff96;box-shadow:inset 0 1px 0 #ffffff80,0 13px 31px #0005,0 0 18px #62a7e92e}
+.app-tile.selected,.app-tile.selected:hover,.app-tile.selected:focus-visible{background:linear-gradient(145deg,#a0d9ff62,#348cd33d 50%,#2457942e);border:1px solid #adebffee;box-shadow:inset 0 2px 1px #ffffff91,inset 0 -1px 0 #94d8ff32,0 9px 30px #278fdd5c,0 0 0 1px #a5ecff34;backdrop-filter:blur(29px) saturate(180%);-webkit-backdrop-filter:blur(29px) saturate(180%)}
+.app-tile>.symbol{display:grid;place-items:center;flex:none;font-size:28px;width:49px;height:49px;border-radius:15px;background:linear-gradient(145deg,#e6f5ff37,#90b8da1c);border:1px solid #ecf8ff3f;box-shadow:inset 0 1px 0 #ffffff42}
+.app-tile.selected>.symbol{background:linear-gradient(140deg,#e8faff69,#51a4e539);border-color:#ddf6ff9e;color:#e4f9ff}
+.recent-chip{border-radius:16px}
+.login-card{background:linear-gradient(140deg,#a2caff40,#4a86c034 45%,#173755af);border-color:#d8efff88;box-shadow:inset 0 2px 1px #ffffff4b,0 22px 60px #0007;backdrop-filter:blur(32px) saturate(165%);-webkit-backdrop-filter:blur(32px) saturate(165%)}
+.login-card input{background:#e7f5ff17;border-color:#e8f6ff54}
+.login-button{background:linear-gradient(130deg,#9adaffdb,#3184d4ec);box-shadow:inset 0 2px 1px #ffffff71,0 9px 22px #3678bf65}
+@media(max-width:560px){.app-tile>.symbol{width:44px;height:44px;font-size:26px}.app-tile{gap:8px;padding:9px 6px}.hero:before{left:0;right:-50%;bottom:-155px}}
+@media(prefers-reduced-motion:reduce){.app-tile:hover,.app-tile:focus-visible{transform:none}}
