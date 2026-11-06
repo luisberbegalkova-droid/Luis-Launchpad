@@ -96,6 +96,7 @@ a{text-decoration:none;color:inherit}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 <link rel="stylesheet" href="/liquid-glass.css?v=3">
+<link rel="stylesheet" href="/apple-launchpad.css?v=1">
 </head>
 <body>
 <section id="loginScreen" class="login-screen">
@@ -240,5 +241,6 @@ $("logoutButton").onclick=handleLogout;
 document.addEventListener("click",e=>{if(!e.target.closest(".profile-wrap")){$("profileMenu").hidden=true;$("profileButton").setAttribute("aria-expanded","false")}});
 document.addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"&&currentUser){e.preventDefault();$("searchInput").focus()}if(e.key==="Escape"){$("profileMenu").hidden=true;$("profileButton").setAttribute("aria-expanded","false");if(document.activeElement===$("searchInput"))$("searchInput").blur()}});
 </script>
+<script src="/launchpad-preferences.js?v=1"></script>
 </body>
 </html>
